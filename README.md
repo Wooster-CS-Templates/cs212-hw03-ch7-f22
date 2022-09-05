@@ -12,12 +12,7 @@ revealing the answers. For example, if you want to compute response,
 turnaround, and wait for three jobs using the FIFO policy, run this:
 
 ```sh
-prompt> ./scheduler.py -p FIFO -j 3 -s 100
-```
-
-If that doesn't work, try this:
-```sh
-prompt> python ./scheduler.py -p FIFO -j 3 -s 100
+prompt> python3 scheduler.py -p FIFO -j 3 -s 100
 ```
 
 This specifies the FIFO policy with three jobs, and, importantly, a specific
@@ -26,7 +21,7 @@ you have to specify this exact same random seed again. Let's run it and see
 what happens. This is what you should see:
 
 ```sh
-prompt> ./scheduler.py -p FIFO -j 3 -s 100
+prompt> python3 scheduler.py -p FIFO -j 3 -s 100
 ARG policy FIFO
 ARG jobs 3
 ARG maxlen 10
@@ -53,7 +48,7 @@ Once you are done, you can use the same program to "solve" the problem and see
 if you did your work correctly. To do so, use the "-c" flag. The output:
 
 ```sh
-prompt> ./scheduler.py -p FIFO -j 3 -s 100 -c
+prompt> python3 scheduler.py -p FIFO -j 3 -s 100 -c
 ARG policy FIFO
 ARG jobs 3
 ARG maxlen 10
@@ -102,7 +97,7 @@ the exact jobs you wish to see scheduled. For example, if you want to find out
 how SJF would perform with three jobs of lengths 5, 10, and 15, you can run:
 
 ```sh
-prompt> ./scheduler.py -p SJF -l 5,10,15
+prompt> python3 scheduler.py -p SJF -l 5,10,15
 ARG policy SJF
 ARG jlist 5,10,15
 
@@ -123,7 +118,7 @@ first) or even RR (round robin) schedulers. Try them and see!
 And you can always run 
 
 ```sh
-prompt> ./scheduler.py -h
+prompt> python3 scheduler.py -h
 ```
 
 to get a complete list of flags and options (including options such as setting
